@@ -1,5 +1,7 @@
 import pygame
 import random
+import urllib.request
+import io
 
 # Inicialização do Pygame
 pygame.init()
@@ -22,10 +24,15 @@ BLUE = (0, 0, 255)
 snake_size = 20
 snake_speed = 15
 
+# URL da imagem da Arbok
+AROK_IMAGE_URL = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/24.png"
+
 # Função para carregar a imagem da Arbok
 def load_image():
-    image = pygame.image.load('arbok.png')
-    return pygame.transform.scale(image, (snake_size, snake_size))
+    with urllib.request.urlopen(AROK_IMAGE_URL) as url:
+        image_file = io.BytesIO(url.read())
+        image = pygame.image.load(image_file)
+        return pygame.transform.scale(image, (snake_size, snake_size))
 
 # Função para desenhar a cobrinha
 def draw_snake(snake_list):
