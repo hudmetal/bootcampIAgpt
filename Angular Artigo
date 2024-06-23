@@ -1,1 +1,39 @@
-<link>https://web.dio.me/articles/angular-diretivas-melhores-praticas-para-um-desenvolvimento-eficiente?back=%2Farticles&open-modal=true&page=1&order=oldest</link>
+O que são diretivas no Angular
+Imagina que você tem um superpoder no seu caderno de desenho. As diretivas no Angular são como esses superpoderes. Elas ajudam a mudar ou criar coisas na tela da sua aplicação. São comandos especiais que dizem ao Angular o que fazer com o seu HTML.
+O que são diretivas estruturais
+As diretivas estruturais são superpoderes que mudam a estrutura do seu desenho. Elas podem fazer aparecer ou desaparecer partes do seu desenho, ou até repetir partes dele. No Angular, elas começam com um asterisco (*).
+Exemplos com códigos de diretivas estruturais
+Aqui estão alguns exemplos:
+1.	ngIf: Faz aparecer ou desaparecer algo no seu desenho.
+html
+Copiar código
+<div *ngIf="mostrar">
+  Este texto só aparece se "mostrar" for verdadeiro.
+</div>
+2.	ngFor: Repete uma parte do seu desenho várias vezes.
+html
+Copiar código
+<div *ngFor="let item of itens">
+  {{ item }}
+</div>
+O que são diretivas de atributos
+Diretivas de atributos são superpoderes que mudam a aparência ou o comportamento de um pedaço do seu desenho. Elas não mudam a estrutura, mas podem mudar cores, tamanhos e outras coisas.
+Exemplos com código de diretiva de atributos
+Aqui estão alguns exemplos:
+1.	ngClass: Muda as classes CSS de um elemento.
+html
+Copiar código
+<div [ngClass]="{ 'ativo': estaAtivo }">
+  Este texto muda de classe CSS.
+</div>
+2.	ngStyle: Muda os estilos CSS de um elemento.
+html
+Copiar código
+<div [ngStyle]="{ 'color': corTexto }">
+  Este texto muda de cor.
+</div>
+Call to Action para redes sociais
+Gostou de aprender sobre diretivas no Angular? Siga-me nas redes sociais para mais dicas incríveis sobre programação! Não perca nenhuma atualização!
+Hashtags
+#Angular #ProgramaçãoDivertida #AprendizadoFacil
+
